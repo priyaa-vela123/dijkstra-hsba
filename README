@@ -1,0 +1,25 @@
+# Dijkstra's Shortest Path – HSBA Project
+
+Python implementation of Dijkstra's algorithm for the HSBA course *Algorithmic Thinking*.
+
+## Files
+
+- `dijkstra.py` – core algorithm
+- `tests.py` – simple test case
+- `report.pdf` – full project report
+
+## Usage
+
+```python
+from dijkstra import dijkstra
+
+graph = {
+    "A": [("B", 4), ("C", 2)],
+    "B": [("D", 10)],
+    "C": [("E", 3)],
+    "D": [],
+    "E": [("D", 4)],
+}
+
+distances, prev = dijkstra(graph, "A")
+print(distances)
